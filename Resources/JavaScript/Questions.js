@@ -1,4 +1,4 @@
-// questions *****************************************************
+// questions //
 var questions = [
     {
         title: "Commonly Used data types DO NOT include:",
