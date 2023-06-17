@@ -22,6 +22,6 @@ On top of that I also had a lot of long caffinated nights with google and my clo
 
 All in all this was a very challenging assignment for me and I'm still wrapping my brain around most of the javascript language but I'm becoming more and more confident in the HTML and CSS part of it all. 
 
-
+https://github.com/emelmusica/W4-Quiz-Site-Challenge/settings/pages
 
 ![Screen Shot of Code Quiz page](<Resources/Photos/Code Quiz SS.png>)
