@@ -18,7 +18,7 @@ For this challenge I was able to find this youtube video that helped walk me thr
 
 Please note that I didn't fully utilise the code in the video and implemented my own styling and properties that made more sense to me and how I've been going about creating this. 
 
-On top of that I also had a lot of long caffinated nights with google and my close friend that has been coding professionally for many years walk me through most of the Javascript. 
+On top of that I also had a lot of long caffeinated nights with google and my close friend that has been coding professionally for many years walk me through most of the Javascript. 
 
 All in all this was a very challenging assignment for me and I'm still wrapping my brain around most of the javascript language but I'm becoming more and more confident in the HTML and CSS part of it all. 
 
