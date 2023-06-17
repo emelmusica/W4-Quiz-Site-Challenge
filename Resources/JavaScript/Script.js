@@ -48,14 +48,14 @@ function startQuiz() {
   }
 
   function getQuestion() {
-    // get current question object from array
+    // get current question object
     var currentQuestion = questions[currentQuestionIndex];
   
-    // update title with current question
+    // update title 
     var titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
   
-    // clear out any old question choices
+    // clear out old question choices
     choicesEl.innerHTML = "";
   
     // loop over choices
@@ -70,23 +70,27 @@ function startQuiz() {
       // attach click event listener to each choice
       choiceNode.onclick = questionClick;
   
-      // display on the page
+      // display on page
       choicesEl.appendChild(choiceNode);
     });
   }
 
-// click on question answer either generate new question or end quiz if final question, and deduct time for answering wrong
+
+
+// click on question answer, generate new question or end quiz if final question, and deduct time for wrong answer
   function questionClick() {
     // check if user guessed wrong
     if (this.value !== questions[currentQuestionIndex].answer) {
-      // penalize time
+
+
+      // deduct time for wrong answers
       time -= 15;
   
       if (time < 0) {
         time = 0;
       }
   
-      // display new time on page
+      // display new time 
       timeEl.textContent = time;
   
   
@@ -101,10 +105,13 @@ function startQuiz() {
     setTimeout(function() {
       feedbackEl.setAttribute("class", "feedback hide");
     }, 1000);
+
+
   
     // move to next question
     currentQuestionIndex++;
   
+    
     // check if we've run out of questions
     if (currentQuestionIndex === questions.length) {
       quizEnd();
