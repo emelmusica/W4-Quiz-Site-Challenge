@@ -1,9 +1,10 @@
-// Function to print and display high scores
+// Print and display high scores
 function printHighscores() {
-  // Retrieve high scores from local storage or create an empty array if none exists
+
+  // Retrieve high scores or create an empty array if none exists
   var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
 
-  // Sort high scores in descending order based on score
+  // Sort high scores from high to low
   highscores.sort(function(a, b) {
     return b.score - a.score;
   });
@@ -13,7 +14,7 @@ function printHighscores() {
   // Clear the previous high scores
   highscoresList.innerHTML = "";
 
-  // Iterate through the high scores and create list items to display each score
+  // display each score
   highscores.forEach(function(score) {
     var liTag = document.createElement("li");
     liTag.textContent = score.initials + " - " + score.score;
@@ -22,21 +23,23 @@ function printHighscores() {
   });
 }
 
-// Function to clear high scores
+// clear high scores
 function clearHighscores() {
-  // Remove high scores from local storage
+  // Remove high scores from storage
   localStorage.removeItem("highscores");
 
-  // Get the element for displaying the high scores
+  // display high scores
   var highscoresList = document.getElementById("highscores");
-  // Clear the displayed high scores
+
+  // Clear high scores
   highscoresList.innerHTML = "";
 }
 
-// Get the clear button element
+// clear button element
 var clearButton = document.getElementById("clear");
-// Add click event listener to the clear button, calling the clearHighscores function
+
+// Call High Scores
 clearButton.addEventListener("click", clearHighscores);
 
-// Call the printHighscores function to display the high scores
+// Call the printHighscores function 
 printHighscores();

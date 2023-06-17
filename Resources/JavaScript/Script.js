@@ -3,7 +3,7 @@ var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-// variables to reference DOM elements....................................
+// reference DOM elements
 var timeEl = document.querySelector("#time");
 var startBtn = document.querySelector("#startButton");
 var submitBtn = document.querySelector("#submit-button");
@@ -60,6 +60,7 @@ function startQuiz() {
   
     // loop over choices
     currentQuestion.choices.forEach(function(choice, i) {
+
       // create new button for each choice
       var choiceNode = document.createElement("button");
       choiceNode.setAttribute("class", "choice");
@@ -111,7 +112,7 @@ function startQuiz() {
     // move to next question
     currentQuestionIndex++;
   
-    
+
     // check if we've run out of questions
     if (currentQuestionIndex === questions.length) {
       quizEnd();
@@ -140,11 +141,13 @@ function startQuiz() {
 
 // function for saving highscore
 function saveHighscore() {
+
     // get value of input box
     var initials = initialsEl.value.trim();
   
     // make sure value wasn't empty
     if (initials !== "") {
+
       // get saved scores from localstorage, or if not any, set to empty array
       var highscores =
         JSON.parse(window.localStorage.getItem("highscores")) || [];
@@ -165,6 +168,7 @@ function saveHighscore() {
   }
 
   function checkForEnter(event) {
+    
     // "13" represents the enter key
     if (event.key === "Enter") {
       saveHighscore();
